@@ -21,4 +21,6 @@ from electronics import views   # 👈 import
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home, name='home'),   # 👈 homepage URL
+    path('products/', views.products, name='products'),
 ]
+
