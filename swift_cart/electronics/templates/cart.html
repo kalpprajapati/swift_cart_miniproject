@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cart - Swift Cart</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            background-color: #f1f3f6;
+        }
+
+        .navbar {
+            background-color: #2874f0;
+            color: white;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .navbar a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 70%;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+
+        .total {
+            font-weight: bold;
+            font-size: 18px;
+            margin-top: 20px;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div>🛒 Swift Cart</div>
+        <div>
+            <a href="/">Home</a>
+            <a href="/products/">Products</a>
+            <a href="/about/">About</a>
+            <a href="/contact/">Contact</a>
+            <a href="/cart/">Cart</a>
+        </div>
+    </div>
+
+    <!-- Cart Content -->
+    <div class="container">
+        <h2>Your Cart</h2>
+
+        {% for item in cart_items %}
+        <div class="item">
+            <span>{{ item.name }}</span>
+            <span>₹{{ item.price }}</span>
+            
+            <a href="/remove-from-cart/{{ forloop.counter0 }}/">
+                <button style="background:red; color:white; border:none; padding:5px;">Remove</button>
+            </a>
+        </div>
+        {% endfor %}
+
+        <div class="total">
+            Total: ₹{{ total }}
+        </div>
+    </div>
+
+</body>
+</html>
