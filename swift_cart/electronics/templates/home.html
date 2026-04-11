@@ -6,51 +6,39 @@
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f1f3f6;
+            font-family: Arial;
+            background: linear-gradient(to right, #eef2f3, #dfe9f3);
         }
 
-        /* Navbar */
         .navbar {
-            background-color: #2874f0;
+            background: linear-gradient(90deg, #2874f0, #1e5ed8);
             color: white;
-            padding: 15px;
+            padding: 15px 30px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo {
-            font-size: 22px;
+        .navbar a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
             font-weight: bold;
         }
 
-        .search-box input {
-            padding: 7px;
-            width: 300px;
-            border: none;
-            border-radius: 3px;
+        .navbar a:hover {
+            text-decoration: underline;
         }
 
-        .cart {
-            font-size: 18px;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
         .hero {
-            background-color: white;
-            padding: 40px;
+            background: linear-gradient(90deg, #2874f0, #1e5ed8);
+            color: white;
+            padding: 50px;
             text-align: center;
+            border-radius: 10px;
             margin: 20px;
-            border-radius: 8px;
         }
 
-        .hero h1 {
-            margin: 0;
-        }
-
-        /* Product Section */
         .products {
             display: flex;
             flex-wrap: wrap;
@@ -61,10 +49,16 @@
         .product-card {
             background: white;
             padding: 15px;
-            border-radius: 8px;
+            border-radius: 12px;
             width: 220px;
             text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
         }
 
         .product-card img {
@@ -73,73 +67,60 @@
             object-fit: contain;
         }
 
-        .product-card {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            width: 220px;
-            text-align: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        button {
+            background: linear-gradient(90deg, #2874f0, #1e5ed8);
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #0d47a1;
         }
     </style>
 </head>
 <body>
 
-    <!-- Navbar -->
-    <div class="navbar">
-        <div class="logo">🛒 Swift Cart</div>
-        <div>
-            <a href="/" style="color:white; margin-right:15px;">Home</a>
-            <a href="/products/" style="color:white; margin-right:15px;">Products</a>
-            <a href="/about/" style="color:white;">About</a>
-            <a href="/contact/" style="color:white;">Contact</a>
-            <a href="/cart/" style="color:white;">Cart 🛍️</a>
-        </div>
+<div class="navbar">
+    <div>🛒 Swift Cart</div>
+    <div>
+        <a href="/">Home</a>
+        <a href="/products/">Products</a>
+        <a href="/about/">About</a>
+        <a href="/contact/">Contact</a>
+        <a href="/cart/">Cart</a>
+    </div>
+</div>
 
-        <div class="search-box">
-            <input type="text" placeholder="Search for products...">
-        </div>
+<div class="hero">
+    <h1>Welcome to Swift Cart 🚀</h1>
+    <p>Your one-stop shop for electronics</p>
+</div>
 
-        <div class="product-card">Cart 🛍️</div>
+<div class="products">
+    <div class="product-card">
+        <img src="{% static 'images/phone.png' %}">
+        <h3>Smartphone</h3>
+        <p>₹15,000</p>
+        <a href="/add-to-cart/Smartphone/15000/"><button>Add to Cart</button></a>
     </div>
 
-    <!-- Hero Section -->
-    <div class="hero">
-        <h1>Welcome to Swift Cart 🚀</h1>
-        <p>Your one-stop shop for electronics</p>
+    <div class="product-card">
+        <img src="{% static 'images/laptop.png' %}">
+        <h3>Laptop</h3>
+        <p>₹50,000</p>
+        <a href="/add-to-cart/Laptop/50000/"><button>Add to Cart</button></a>
     </div>
 
-    <!-- Products -->
-    <div class="products">
-        
-        <div class="product-card">
-            <img src="{% static 'images/phone.png' %}">
-            <h3>Smartphone</h3>
-            <p>₹15,000</p>
-            <a href="/add-to-cart/Smartphone/15000/">
-                <button>Add to Cart</button>
-            </a>
-        </div>
-
-        <div class="product-card">   
-            <img src="{% static 'images/laptop.png' %}">
-            <h3>Laptop</h3>
-            <p>₹50,000</p>
-            <a href="/add-to-cart/Laptop/50000/">
-                <button>Add to Cart</button>
-            </a>
-        </div>
-
-        <div class="product-card">   
-            <img src="{% static 'images/headphone.png' %}">
-            <h3>Headphones</h3>
-            <p>₹2,000</p>
-            <a href="/add-to-cart/Headphones/2000/">
-                <button>Add to Cart</button>
-            </a>
-        </div>
-
+    <div class="product-card">
+        <img src="{% static 'images/headphone.png' %}">
+        <h3>Headphones</h3>
+        <p>₹2,000</p>
+        <a href="/add-to-cart/Headphones/2000/"><button>Add to Cart</button></a>
     </div>
+</div>
 
 </body>
 </html>
