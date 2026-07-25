@@ -30,31 +30,31 @@ It allows users to browse products, add items to cart, and manage their shopping
 
 ### 🏠 Home Page
 
-![Home](screenshots/home.png)
+![Home](swift_cart/electronics/screenshots/home.png)
 
 ### 🛍️ Products Page
 
-![Products](screenshots/products.png)
+![Products](swift_cart/electronics/screenshots/products.png)
 
 ### ℹ️ About Page
 
-![About](screenshots/about.png)
+![About](swift_cart/electronics/screenshots/about.png)
 
 ### 📞 Contact Page
 
-![Contact](screenshots/contact.png)
+![Contact](swift_cart/electronics/screenshots/contact.png)
 
 ### 🛒 Cart (Empty)
 
-![Cart Empty](screenshots/cart_empty.png)
+![Cart Empty](swift_cart/electronics/screenshots/cart_empty.png)
 
 ### 🛒 Cart (With Items)
 
-![Cart Full](screenshots/cart_full.png)
+![Cart Full](swift_cart/electronics/screenshots/cart_full.png)
 
 ### ❌ Remove Item from Cart
 
-![Cart Remove](screenshots/cart_removed.png)
+![Cart Remove](swift_cart/electronics/screenshots/cart_removed.png)
 
 ---
 
